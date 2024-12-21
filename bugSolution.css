@@ -1,0 +1,27 @@
+To fix the issue, you can explicitly set the width of the parent container or use a different layout method like flexbox:
+
+**Solution 1: Setting parent width**
+
+```css
+.container {
+  width: 100%; /* or a specific width */
+}
+div {
+  width: 50%;
+  float: left;
+  box-sizing: border-box; /* Avoid unexpected width issues */
+}
+```
+
+**Solution 2: Using Flexbox**
+
+```css
+.container {
+  display: flex;
+}
+div {
+  width: 50%;
+}
+```
+
+Flexbox provides a more robust and predictable way to handle layout, avoiding the complexities associated with floats.  Choose the solution that best fits your project's needs and overall layout strategy.
