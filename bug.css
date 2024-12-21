@@ -1,0 +1,10 @@
+The following CSS code causes unexpected behavior in some browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+This code intends to make two divs occupy half the width of their container each. However, if the parent container's width is not specified and it is not a block level element, some browsers might not render them correctly because of the `float:left` property which removes the element from the document flow. 
